@@ -32,7 +32,7 @@ class MarkdownReader(NotebookReader):
     # fenced code
     fenced_regex = r"""
     \n*                     # any number of newlines followed by
-    ^(?P<fence>`{3,}|~{3,}) # a line starting with a fence of 3 or more ` or ~
+    ^(?P<fence>`{3,}|~{3,}\{{0,}) # a line starting with a fence of 3 or more ` or ~
     (?P<language>           # followed by the group 'language',
     [\w+-]*)                # a word of alphanumerics, _, - or +
     [ ]*                    # followed by spaces
